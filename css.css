@@ -1,0 +1,344 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:  linear-gradient(rgba(82, 68, 109, 0.4), rgba(33, 25, 63, 0.4)), url("team.jpg") no-repeat center center;
+    background-size: cover;
+    background-color: #d8d8ff;
+    background-position: center;
+    background-attachment: fixed;
+    font-family:Arial, sans-serif;
+    /* background:linear-gradient(to bottom,#070b24,#2f1247,#3d185c); */
+}
+main{
+    display:flex;
+    gap:20px;
+    padding:20px;
+    align-items: center;
+    justify-content: center;
+}
+section{
+    width:90%;
+}
+section h2{
+    color:white;
+    margin-bottom:20px;
+}
+.hero{
+    text-align:center;
+    color:white;
+    padding:60px 20px;
+}
+article{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+.card{
+    background:rgb(119, 113, 113);
+    padding:15px;
+    border-radius:15px;
+    text-align:center;
+    color:#0d0221;
+    transition:0.3s;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    justify-content: center;
+}
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(255,255,255,0.2);
+}
+
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:10px;
+}
+button{
+    background:#1b1435;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:10px 15px;
+    margin-top:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+button:hover{
+    background:#5b3d94;
+}
+footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+    scroll-margin: 70px;
+}
+.auth-wrap{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:calc(100vh - 250px);
+    padding:40px 20px;
+}
+.login-box{
+    width:90%;
+    max-width:420px;
+    margin-left: 10px;
+    background:rgba(13, 10, 30, 0.55);
+    backdrop-filter:blur(6px);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:20px;
+    padding:15px;
+    color:white;
+    box-shadow:0 20px 45px rgba(0,0,0,0.45);
+    transition:0.3s;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box h1{
+    margin-bottom:35px;
+    font-size:28px;
+    text-align:center;
+}
+.input-box{
+    margin-bottom:25px;
+}
+.input-box input{
+    width:100%;
+    height:30px;
+    padding:20px;
+    border-radius:10px;
+    border:none;
+    font-size:15px;
+}
+.input-box input:focus{
+    outline:3px solid #9b5cff;
+}
+.forgot{
+    text-align:right;
+    margin-bottom:25px;
+}
+.forgot a{
+    color:#ccc;
+    text-decoration:none;
+}
+.forgot a:hover{
+    color:white;
+    text-decoration:underline;
+}
+.auth-btn-wrap{
+    display:flex;
+    justify-content:center;
+}
+.login-box button{
+    width:150px;
+    padding:14px;
+    border:none;
+    border-radius:40px;
+    background:#7b2ff7;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    margin-top:0;
+}
+.login-box button:hover{
+    background:#9b5cff;
+}
+.signup{
+    text-align:center;
+    margin-top:20px;
+    color:#bbb;
+}
+.signup a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+.signup a:hover{
+    text-decoration:underline;
+}
+.icon-btn{
+    background:none;
+    border:none;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    padding:0;
+    margin:0;
+}
+.icon-btn:hover{
+    background:none;
+    color:#d8d8ff;
+}
+footer p{
+    margin:4px 0;
+}
+#sidebar-active{
+    display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+    display: none;
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    position: sticky;
+    background-color: #190e22;
+}
+h2{
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+.ul-links{
+    border: 2px solid rgb(255, 255, 255);
+    flex-direction: row;
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    align-items: center;
+    margin: 0;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.ul-links li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 600;
+}
+.ul-links li a:hover,
+.ul-links li a.active{
+    box-shadow: 0 2px 0 0 #402c52;
+    color: #402c52;
+}
+.icon{
+    display: flex;
+    gap: 20px;
+}
+#sidebar-active{
+    display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+    display: none;
+}
+@media(max-width:480px){
+    .login-box{
+        padding:35px 25px;
+    }
+}
+.nav-toggle-checkbox{
+    display:none;
+}
+.hamburger{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:26px;
+    cursor:pointer;
+    padding:0 10px;
+}
+.hamburger:hover{
+    background:none;
+    color:#d8d8ff;
+}
+nav .container{
+    position:relative;
+}
+.nav-overlay{
+    display:none;
+}
+
+@media(max-width:900px){
+.container{
+    width:90%;
+}
+}
+
+@media(max-width:992px){
+    @media screen and (max-width: 567px){
+    .link-container{
+        display: flex;
+        width: 100px;
+        height: auto;
+        flex-direction: column;
+        padding: px;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100px;
+        z-index: 100;
+        background-color: #190e22;
+        transition: all 0.3s ease-out;
+        border-bottom-left-radius: 20px;
+        border: none;
+    }
+    .ul-links{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .ul-links li{
+        width: 100%;
+    }
+    .ul-links li a{
+        width: 100%;
+        font-size: 10px;
+        color: rgb(255, 255, 255);
+        
+    }
+    .icon{
+        display: none;
+    }
+    #sidebar-active:checked ~ .link-container{
+        right: 0;
+    }
+    .open-sidebar-button, .close-sidebar-button{
+        display: block;
+        cursor: pointer;
+    }
+    .close-sidebar-button{
+        padding: 20px;
+        align-self: flex-end;
+    }
+    .banner img{
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    }
+    .caption{
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-weight: 600;
+    }
+    .btn{
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .btn button{
+        padding: 10px 30px;
+        font-size: 15px;
+    }
+}
+}
+ 
